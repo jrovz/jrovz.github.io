@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Proyectos · Portafolio{% endblock %}
+{% block content %}
+  <h1 class="h4 mb-3">Proyectos</h1>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+    {% for project in projects %}
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          {% if project.image %}
+            <img class="card-img-top project-cover" src="{{ url_for('portfolio.static', filename=project.image) }}" alt="{{ project.title }}" />
+          {% endif %}
+          <div class="card-body">
+            <h2 class="h6">{{ project.title }}</h2>
+            <p class="small text-muted">{{ project.description }}</p>
+            <div class="d-flex gap-1 flex-wrap mb-2">
+              {% for tag in project.tags %}
+                <span class="badge text-bg-light border">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            <div class="d-flex gap-2">
+              {% if project.repo_url %}
+                <a class="btn btn-sm btn-outline-primary" href="{{ project.repo_url }}" target="_blank" rel="noopener">Repositorio</a>
+              {% endif %}
+              {% if project.live_url %}
+                <a class="btn btn-sm btn-primary" href="{{ project.live_url }}" target="_blank" rel="noopener">Ver sitio</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+
