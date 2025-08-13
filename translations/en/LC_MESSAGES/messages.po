@@ -75,4 +75,45 @@ msgstr "About"
 msgid "Contactar"
 msgstr "Contact"
 
+# Diplomas – dynamic titles
+msgid "Diploma universitario — Ingeniero Electrónico"
+msgstr "University diploma — Electronic Engineer"
+
+msgid "Ruta: Administración de servidores Linux (Platzi)"
+msgstr "Path: Linux Server Administration (Platzi)"
+
+msgid "Ruta: Datos e Inteligencia Artificial (Platzi)"
+msgstr "Path: Data and Artificial Intelligence (Platzi)"
+
+msgid "Diploma: Backend con Python (Platzi)"
+msgstr "Diploma: Backend with Python (Platzi)"
+
+msgid "Diploma: Flask (Platzi)"
+msgstr "Diploma: Flask (Platzi)"
+
+msgid "Diploma: Agentes de IA (Platzi)"
+msgstr "Diploma: AI Agents (Platzi)"
+
+msgid "Diploma: Bases de datos SQL (Platzi)"
+msgstr "Diploma: SQL Databases (Platzi)"
+
+msgid "Diploma: Fundamentos de Arquitectura de Software (Platzi)"
+msgstr "Diploma: Fundamentals of Software Architecture (Platzi)"
+
+# Data/content from models.py
+msgid "Ingeniero electrónico y desarrollador de software"
+msgstr "Electronic engineer and software developer"
+
+msgid "Ingeniero Electrónico con formación especializada en análisis de datos e inteligencia artificial, enfocado en el desarrollo de software y en soluciones tecnológicas inteligentes. Cuento con experiencia en sistemas embebidos; modelado y análisis de datos con Python y SQL; administración de servidores Linux; y desarrollo de aplicaciones web. Combino una base técnica sólida con una visión práctica para crear soluciones escalables, confiables y listas para entornos de producción."
+msgstr "Electronic Engineer specialized in data analysis and artificial intelligence, focused on software development and intelligent technological solutions. Experienced in embedded systems; data modeling and analysis with Python and SQL; Linux server administration; and web application development. I combine a solid technical foundation with a practical approach to build scalable, reliable, production-ready solutions."
+
+msgid "Aplicación web en producción para gestión de barbería: reservas online, catálogo de servicios y panel administrativo. En operación real, construida con Flask y PostgreSQL."
+msgstr "Production web application for barbershop management: online bookings, services catalog, and admin panel. Live system built with Flask and PostgreSQL."
+
+msgid "Tarjeta educativa y proyecto IoT con ESP32 para prototipos: sensores, monitoreo y conexión WiFi; incluye flujo de datos y scripts en Python para procesamiento/IA."
+msgstr "Educational board and IoT project with ESP32 for prototypes: sensors, monitoring, and WiFi connectivity; includes data pipeline and Python scripts for processing/AI."
+
+msgid "Chatbot para Telegram que consume la API de CoinMarketCap, almacena datos en SQLite, analiza mercado (tendencias, liquidez, volatilidad, dominancia) y envía reportes estructurados."
+msgstr "Telegram chatbot consuming CoinMarketCap API, stores data in SQLite, analyzes market (trends, liquidity, volatility, dominance), and sends structured reports."
+
 

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from flask_babel import _
 from typing import List
 
 
@@ -35,8 +36,8 @@ class Project:
 def get_sample_profile() -> Profile:
     return Profile(
         full_name="Juan Felipe Rodriguez Valencia",
-        role="Ingeniero electrónico y desarrollador de software",
-        bio=(
+        role=_("Ingeniero electrónico y desarrollador de software"),
+        bio=_(
             "Ingeniero Electrónico con formación especializada en análisis de datos e inteligencia artificial, "
             "enfocado en el desarrollo de software y en soluciones tecnológicas inteligentes. "
             "Cuento con experiencia en sistemas embebidos; modelado y análisis de datos con Python y SQL; "
@@ -91,7 +92,7 @@ def get_sample_projects() -> list[Project]:
     return [
         Project(
             title="La Barber Brothers",
-            description=(
+            description=_(
                 "Aplicación web en producción para gestión de barbería: reservas online, catálogo de servicios y "
                 "panel administrativo. En operación real, construida con Flask y PostgreSQL."
             ),
@@ -102,7 +103,7 @@ def get_sample_projects() -> list[Project]:
         ),
         Project(
             title="scholarESP32",
-            description=(
+            description=_(
                 "Tarjeta educativa y proyecto IoT con ESP32 para prototipos: sensores, monitoreo y conexión WiFi; "
                 "incluye flujo de datos y scripts en Python para procesamiento/IA."
             ),
@@ -113,7 +114,7 @@ def get_sample_projects() -> list[Project]:
         ),
         Project(
             title="CryptoBot (Telegram)",
-            description=(
+            description=_(
                 "Chatbot para Telegram que consume la API de CoinMarketCap, almacena datos en SQLite, "
                 "analiza mercado (tendencias, liquidez, volatilidad, dominancia) y envía reportes estructurados."
             ),

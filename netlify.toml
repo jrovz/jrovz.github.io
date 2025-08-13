@@ -1,5 +1,5 @@
 [build]
-  command = "pip install -r requirements.txt && python -m babel.messages.frontend compile -d translations || true && python freeze.py"
+  command = "pip install -r requirements.txt && python -m babel.messages.frontend compile -d translations && python freeze.py"
   publish = "build"
 
 [build.environment]

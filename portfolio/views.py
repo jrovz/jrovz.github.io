@@ -57,35 +57,35 @@ def diplomas():
             # Heurística de títulos amigables
             lower = filename.lower()
             if filename.startswith("1825-AA"):
-                title = "Diploma universitario — Ingeniero Electrónico"
+                title = _("Diploma universitario — Ingeniero Electrónico")
                 priority = True
                 group = "featured"
             elif "administracion-de-servidores-linux" in lower:
-                title = "Ruta: Administración de servidores Linux (Platzi)"
+                title = _("Ruta: Administración de servidores Linux (Platzi)")
                 priority = False
                 group = "primary"
             elif "diploma-datos-ai" in lower:
-                title = "Ruta: Datos e Inteligencia Artificial (Platzi)"
+                title = _("Ruta: Datos e Inteligencia Artificial (Platzi)")
                 priority = False
                 group = "primary"
             elif "diploma-backend" in lower:
-                title = "Diploma: Backend con Python (Platzi)"
+                title = _("Diploma: Backend con Python (Platzi)")
                 priority = False
                 group = "more"
             elif "diploma-flask" in lower:
-                title = "Diploma: Flask (Platzi)"
+                title = _("Diploma: Flask (Platzi)")
                 priority = False
                 group = "more"
             elif "diploma-agentes-ai" in lower:
-                title = "Diploma: Agentes de IA (Platzi)"
+                title = _("Diploma: Agentes de IA (Platzi)")
                 priority = False
                 group = "more"
             elif "diploma-dbsql" in lower:
-                title = "Diploma: Bases de datos SQL (Platzi)"
+                title = _("Diploma: Bases de datos SQL (Platzi)")
                 priority = False
                 group = "more"
             elif "diploma-fundamentos-arquitectura-software" in lower:
-                title = "Diploma: Fundamentos de Arquitectura de Software (Platzi)"
+                title = _("Diploma: Fundamentos de Arquitectura de Software (Platzi)")
                 priority = False
                 group = "more"
             else:

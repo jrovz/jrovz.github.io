@@ -4,6 +4,7 @@ import shutil
 from pathlib import Path
 
 from flask_frozen import Freezer
+import sys
 import subprocess
 
 from app import create_app
@@ -30,7 +31,7 @@ def main() -> None:
 
     # Compila traducciones (si existen) antes de congelar
     try:
-        subprocess.run(["pybabel", "compile", "-d", "translations"], check=False)
+        subprocess.run([sys.executable, "-m", "babel.messages.frontend", "compile", "-d", "translations"], check=False)
     except Exception:
         pass
 

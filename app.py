@@ -18,34 +18,37 @@ def create_app() -> Flask:
 
     # i18n: inicializa Babel con selector de locale según prefijo de URL
     def select_locale() -> str:
-        path = request.path or "/"
-        return "en" if path.startswith("/en/") or path == "/en/" else "es"
+        path = (request.path or "/").strip("/")
+        first_segment = path.split("/", 1)[0] if path else ""
+        return "en" if first_segment == "en" else "es"
 
     Babel(app, locale_selector=select_locale)
 
     # Context processor para variables globales en templates
     @app.context_processor
     def inject_globals():
-        path = request.path or "/"
-        lang = "en" if path.startswith("/en/") or path == "/en/" else "es"
+        raw_path = request.path or "/"
+        norm = raw_path if raw_path.endswith("/") else f"{raw_path}/"
+        first_segment = raw_path.strip("/").split("/", 1)[0] if raw_path != "/" else ""
+        lang = "en" if first_segment == "en" else "es"
 
         # Calcula URL alterna para switch ES/EN
         if lang == "es":
-            if path == "/":
+            if norm == "/":
                 alt = "/en/"
             else:
                 alt = (
-                    path
+                    norm
                     .replace("/proyectos/", "/en/projects/")
                     .replace("/diplomas/", "/en/diplomas/")
                     .replace("/sobre-mi/", "/en/about/")
                 )
         else:
-            if path == "/en/":
+            if norm == "/en/":
                 alt = "/"
             else:
                 alt = (
-                    path
+                    norm
                     .replace("/en/projects/", "/proyectos/")
                     .replace("/en/diplomas/", "/diplomas/")
                     .replace("/en/about/", "/sobre-mi/")
