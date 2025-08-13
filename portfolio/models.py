@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from flask_babel import _
+from flask_babel import lazy_gettext as _
 from typing import List
 
 

@@ -40,9 +40,9 @@ def main() -> None:
     shutil.rmtree(BUILD_DIR, ignore_errors=True)
     freezer.freeze()
 
-    # Copia estáticos a la carpeta de publicación con el mismo static_url_path
-    shutil.rmtree(STATIC_DEST, ignore_errors=True)
-    shutil.copytree(STATIC_SRC, STATIC_DEST)
+    # Los estáticos del blueprint ya son manejados por Frozen-Flask cuando
+    # aparecen referenciados vía url_for('portfolio.static', ...). No es
+    # necesario copiarlos manualmente y así evitamos colisiones en Windows.
 
 
 if __name__ == "__main__":
