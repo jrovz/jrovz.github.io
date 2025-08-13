@@ -1,5 +1,5 @@
 from flask import render_template, request
-from flask_babel import _
+from flask_babel import _, force_locale
 
 from . import bp
 from collections import defaultdict
@@ -31,14 +31,16 @@ def index():
     for category in ordered_categories:
         ordered_stack.extend(categorized.get(category, []))
     projects = get_sample_projects()
-    return render_template(
-        "index.html",
-        profile=profile,
-        stack=stack,
-        categorized_stack=categorized,
-        ordered_stack=ordered_stack,
-        projects=projects,
-    )
+    lang = "en" if request.path.startswith("/en/") or request.path == "/en/" else "es"
+    with force_locale(lang):
+        return render_template(
+            "index.html",
+            profile=profile,
+            stack=stack,
+            categorized_stack=categorized,
+            ordered_stack=ordered_stack,
+            projects=projects,
+        )
 
 
 @bp.get("/diplomas/")
@@ -105,25 +107,31 @@ def diplomas():
     primary_others = [p for p in pdf_files if p.get("group") == "primary"]
     more_others = [p for p in pdf_files if p.get("group") == "more"]
 
-    return render_template(
-        "diplomas.html",
-        featured=featured,
-        others=primary_others,
-        more_others=more_others,
-    )
+    lang = "en" if request.path.startswith("/en/") else "es"
+    with force_locale(lang):
+        return render_template(
+            "diplomas.html",
+            featured=featured,
+            others=primary_others,
+            more_others=more_others,
+        )
 
 
 @bp.get("/proyectos/")
 @bp.get("/en/projects/")
 def projects():
     projects = get_sample_projects()
-    return render_template("projects.html", projects=projects)
+    lang = "en" if request.path.startswith("/en/") else "es"
+    with force_locale(lang):
+        return render_template("projects.html", projects=projects)
 
 
 @bp.get("/sobre-mi/")
 @bp.get("/en/about/")
 def about():
     profile = get_sample_profile()
-    return render_template("about.html", profile=profile)
+    lang = "en" if request.path.startswith("/en/") else "es"
+    with force_locale(lang):
+        return render_template("about.html", profile=profile)
 
 

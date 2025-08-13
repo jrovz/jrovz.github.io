@@ -18,6 +18,7 @@ def create_app() -> Flask:
 
     # i18n: inicializa Babel con selector de locale según prefijo de URL
     def select_locale() -> str:
+        # Fallback global locale; vistas fuerzan locale por ruta con force_locale
         path = (request.path or "/").strip("/")
         first_segment = path.split("/", 1)[0] if path else ""
         return "en" if first_segment == "en" else "es"
