@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Diplomas y certificaciones{% endblock %}
+{% block title %}{{ _('Diplomas y certificaciones') }}{% endblock %}
 {% block content %}
   <div class="row g-4">
     {% if featured %}
@@ -9,8 +9,8 @@
             <div class="row g-4 align-items-center">
               <div class="col-12 col-lg-5">
                 <h1 class="h5 mb-1">{{ featured.title }}</h1>
-                <p class="text-muted mb-3">2017 - 2024</p>
-                <a class="btn btn-primary btn-sm" href="{{ featured.url }}" target="_blank" rel="noopener">Abrir en pestaña nueva</a>
+                <p class="text-muted mb-3">{{ _('2017 - 2024') }}</p>
+                <a class="btn btn-primary btn-sm" href="{{ featured.url }}" target="_blank" rel="noopener">{{ _('Abrir en pestaña nueva') }}</a>
               </div>
               <div class="col-12 col-lg-7">
                 <div class="pdf-preview pdf-preview--featured">
@@ -27,7 +27,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <h2 class="h6 mb-3">Otros diplomas y certificaciones</h2>
+            <h2 class="h6 mb-3">{{ _('Otros diplomas y certificaciones') }}</h2>
             <div class="row row-cols-1 row-cols-md-2 g-3">
               {% for pdf in others %}
                 <div class="col">
@@ -37,7 +37,7 @@
                       <iframe class="pdf-frame" src="{{ pdf.url }}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="{{ pdf.title }}" loading="lazy"></iframe>
                     </div>
                     <div class="mt-2">
-                      <a class="btn btn-outline-secondary btn-sm" href="{{ pdf.url }}" target="_blank" rel="noopener">Abrir</a>
+                      <a class="btn btn-outline-secondary btn-sm" href="{{ pdf.url }}" target="_blank" rel="noopener">{{ _('Abrir') }}</a>
                     </div>
                   </div>
                 </div>
@@ -52,7 +52,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <h2 class="h6 mb-3">Más certificaciones</h2>
+            <h2 class="h6 mb-3">{{ _('Más certificaciones') }}</h2>
             <div class="row row-cols-2 row-cols-md-4 g-3">
               {% for pdf in more_others %}
                 <div class="col">
@@ -62,7 +62,7 @@
                       <iframe class="pdf-frame" src="{{ pdf.url }}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="{{ pdf.title }}" loading="lazy"></iframe>
                     </div>
                     <div class="mt-2 text-end">
-                      <a class="btn btn-outline-secondary btn-sm" href="{{ pdf.url }}" target="_blank" rel="noopener">Abrir</a>
+                      <a class="btn btn-outline-secondary btn-sm" href="{{ pdf.url }}" target="_blank" rel="noopener">{{ _('Abrir') }}</a>
                     </div>
                   </div>
                 </div>

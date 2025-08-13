@@ -1,4 +1,5 @@
-from flask import render_template
+from flask import render_template, request
+from flask_babel import _
 
 from . import bp
 from collections import defaultdict
@@ -8,6 +9,7 @@ from .models import Technology, get_sample_profile, get_sample_projects, get_sam
 
 
 @bp.get("/")
+@bp.get("/en/")
 def index():
     profile = get_sample_profile()
     stack = get_sample_stack()
@@ -40,6 +42,7 @@ def index():
 
 
 @bp.get("/diplomas/")
+@bp.get("/en/diplomas/")
 def diplomas():
     """Página que muestra diplomas y certificaciones.
 
@@ -111,12 +114,14 @@ def diplomas():
 
 
 @bp.get("/proyectos/")
+@bp.get("/en/projects/")
 def projects():
     projects = get_sample_projects()
     return render_template("projects.html", projects=projects)
 
 
 @bp.get("/sobre-mi/")
+@bp.get("/en/about/")
 def about():
     profile = get_sample_profile()
     return render_template("about.html", profile=profile)

@@ -4,6 +4,7 @@ import shutil
 from pathlib import Path
 
 from flask_frozen import Freezer
+import subprocess
 
 from app import create_app
 
@@ -21,8 +22,17 @@ def main() -> None:
     @freezer.register_generator
     def static_pages():
         # Usar barras finales para que genere .../index.html y Netlify sirva como text/html
-        for path in ["/", "/proyectos/", "/diplomas/", "/sobre-mi/"]:
+        for path in [
+            "/", "/proyectos/", "/diplomas/", "/sobre-mi/",
+            "/en/", "/en/projects/", "/en/diplomas/", "/en/about/",
+        ]:
             yield path
+
+    # Compila traducciones (si existen) antes de congelar
+    try:
+        subprocess.run(["pybabel", "compile", "-d", "translations"], check=False)
+    except Exception:
+        pass
 
     # Genera HTMLs
     # Limpia el directorio de salida para evitar archivos obsoletos

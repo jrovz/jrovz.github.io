@@ -1,0 +1,78 @@
+# English translations for the portfolio site.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: portfolio\n"
+"POT-Creation-Date: 2025-08-13 00:00+0000\n"
+"PO-Revision-Date: 2025-08-13 00:00+0000\n"
+"Last-Translator: Juan Rodriguez <you@example.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Base / Navbar
+msgid "Portafolio"
+msgstr "Portfolio"
+
+msgid "Mi Portafolio"
+msgstr "My Portfolio"
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Proyectos"
+msgstr "Projects"
+
+msgid "Diplomas"
+msgstr "Diplomas"
+
+msgid "Construido con Flask"
+msgstr "Built with Flask"
+
+# Index
+msgid "Stack tecnológico"
+msgstr "Tech stack"
+
+msgid "Proyectos destacados"
+msgstr "Featured projects"
+
+msgid "Ver todos"
+msgstr "View all"
+
+# Projects
+msgid "Repositorio"
+msgstr "Repository"
+
+msgid "Ver sitio"
+msgstr "View site"
+
+# Diplomas
+msgid "Diplomas y certificaciones"
+msgstr "Diplomas and certifications"
+
+msgid "Abrir en pestaña nueva"
+msgstr "Open in new tab"
+
+msgid "Otros diplomas y certificaciones"
+msgstr "Other diplomas and certifications"
+
+msgid "Abrir"
+msgstr "Open"
+
+msgid "Más certificaciones"
+msgstr "More certifications"
+
+msgid "2017 - 2024"
+msgstr "2017 - 2024"
+
+# About
+msgid "Sobre mí"
+msgstr "About"
+
+msgid "Contactar"
+msgstr "Contact"
+
+

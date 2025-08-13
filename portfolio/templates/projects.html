@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% block title %}Proyectos · Portafolio{% endblock %}
+{% block title %}{{ _('Proyectos') }} · {{ _('Portafolio') }}{% endblock %}
 {% block content %}
-  <h1 class="h4 mb-3">Proyectos</h1>
+  <h1 class="h4 mb-3">{{ _('Proyectos') }}</h1>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
     {% for project in projects %}
       <div class="col">
@@ -19,10 +19,10 @@
             </div>
             <div class="d-flex gap-2">
               {% if project.repo_url %}
-                <a class="btn btn-sm btn-outline-primary" href="{{ project.repo_url }}" target="_blank" rel="noopener">Repositorio</a>
+                <a class="btn btn-sm btn-outline-primary" href="{{ project.repo_url }}" target="_blank" rel="noopener">{{ _('Repositorio') }}</a>
               {% endif %}
               {% if project.live_url %}
-                <a class="btn btn-sm btn-primary" href="{{ project.live_url }}" target="_blank" rel="noopener">Ver sitio</a>
+                <a class="btn btn-sm btn-primary" href="{{ project.live_url }}" target="_blank" rel="noopener">{{ _('Ver sitio') }}</a>
               {% endif %}
             </div>
           </div>

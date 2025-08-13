@@ -6,11 +6,12 @@ Este proyecto es un sitio personal (portafolio) construido con Flask siguiendo e
 - Páginas de proyectos y sobre mí.
 
 ## Visión general
-- Framework: Flask 3.x
+- Framework: Flask 3.x + Flask-Babel (i18n)
 - Patrón: MVT
 - App factory: `create_app()` en `app.py`
 - UI: Bootstrap 5 + estilos propios en `portfolio/static/css/styles.css`
 - Assets: servidos desde el blueprint en `/portfolio-static/...`
+- i18n: rutas con prefijo `/en/` y textos con gettext `_()`
 
 ## Estructura de carpetas
 ```

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="{{ 'es' if lang=='es' else 'en' }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}Portafolio{% endblock %}</title>
+    <title>{% block title %}{{ _('Portafolio') }}{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,16 +14,19 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top shadow-sm-sm">
       <div class="container">
-        <a class="navbar-brand" href="{{ url_for('portfolio.index') }}">Mi Portafolio</a>
+        <a class="navbar-brand" href="{{ '/' if lang=='es' else '/en/' }}">{{ _('Mi Portafolio') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('portfolio.index') }}">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('portfolio.projects') }}">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('portfolio.diplomas') }}">Diplomas</a></li>
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="{{ '/' if lang=='es' else '/en/' }}">{{ _('Inicio') }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ '/proyectos/' if lang=='es' else '/en/projects/' }}">{{ _('Proyectos') }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ '/diplomas/' if lang=='es' else '/en/diplomas/' }}">{{ _('Diplomas') }}</a></li>
           </ul>
+          <div class="ms-3">
+            <a class="btn btn-sm btn-outline-secondary" href="{{ alt_lang_url }}">{{ 'EN' if lang=='es' else 'ES' }}</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -34,7 +37,7 @@
 
     <footer class="py-4 bg-white border-top">
       <div class="container text-center text-muted">
-        <small>© {{ current_year }} Juan Rodriguez · Construido con Flask</small>
+        <small>© {{ current_year }} Juan Rodriguez · {{ _('Construido con Flask') }}</small>
       </div>
     </footer>
 

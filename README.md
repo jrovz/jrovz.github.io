@@ -61,6 +61,7 @@ Abrir `http://127.0.0.1:5000`.
 
 ## Despliegue
 - Producción: WSGI server (Gunicorn) + Nginx o PaaS.
+- i18n: Español (por defecto) e Inglés en rutas `/en/...` usando Flask-Babel.
 - Establecer `SECRET_KEY` seguro en `app.py` o por variable de entorno.
 
 ## Licencia

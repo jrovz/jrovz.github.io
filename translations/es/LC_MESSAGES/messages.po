@@ -1,0 +1,74 @@
+# Spanish base translations (identity). Useful for completeness.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: portfolio\n"
+"POT-Creation-Date: 2025-08-13 00:00+0000\n"
+"PO-Revision-Date: 2025-08-13 00:00+0000\n"
+"Last-Translator: Juan Rodriguez <you@example.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Identity mappings (optional)
+msgid "Portafolio"
+msgstr "Portafolio"
+
+msgid "Mi Portafolio"
+msgstr "Mi Portafolio"
+
+msgid "Inicio"
+msgstr "Inicio"
+
+msgid "Proyectos"
+msgstr "Proyectos"
+
+msgid "Diplomas"
+msgstr "Diplomas"
+
+msgid "Construido con Flask"
+msgstr "Construido con Flask"
+
+msgid "Stack tecnológico"
+msgstr "Stack tecnológico"
+
+msgid "Proyectos destacados"
+msgstr "Proyectos destacados"
+
+msgid "Ver todos"
+msgstr "Ver todos"
+
+msgid "Repositorio"
+msgstr "Repositorio"
+
+msgid "Ver sitio"
+msgstr "Ver sitio"
+
+msgid "Diplomas y certificaciones"
+msgstr "Diplomas y certificaciones"
+
+msgid "Abrir en pestaña nueva"
+msgstr "Abrir en pestaña nueva"
+
+msgid "Otros diplomas y certificaciones"
+msgstr "Otros diplomas y certificaciones"
+
+msgid "Abrir"
+msgstr "Abrir"
+
+msgid "Más certificaciones"
+msgstr "Más certificaciones"
+
+msgid "2017 - 2024"
+msgstr "2017 - 2024"
+
+msgid "Sobre mí"
+msgstr "Sobre mí"
+
+msgid "Contactar"
+msgstr "Contactar"
+
+

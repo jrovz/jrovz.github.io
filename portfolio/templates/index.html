@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Inicio · Portafolio{% endblock %}
+{% block title %}{{ _('Inicio') }} · {{ _('Portafolio') }}{% endblock %}
 {% block content %}
   <section class="hero card shadow-sm border-0 overflow-hidden mb-4">
     <div class="hero-bg"></div>
@@ -38,7 +38,7 @@
     <div class="col-12 col-lg-12">
       <div class="card shadow-sm">
         <div class="card-body">
-          <h2 class="h5 mb-3">Stack tecnológico</h2>
+          <h2 class="h5 mb-3">{{ _('Stack tecnológico') }}</h2>
           <div class="tech-slider">
             <div class="tech-track">
               {% for tech in ordered_stack %}
@@ -59,8 +59,8 @@
       <div class="card shadow-sm mt-3">
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-center">
-            <h2 class="h5 mb-0">Proyectos destacados</h2>
-            <a href="{{ url_for('portfolio.projects') }}" class="btn btn-sm btn-outline-secondary">Ver todos</a>
+            <h2 class="h5 mb-0">{{ _('Proyectos destacados') }}</h2>
+            <a href="{{ '/proyectos/' if lang=='es' else '/en/projects/' }}" class="btn btn-sm btn-outline-secondary">{{ _('Ver todos') }}</a>
           </div>
           <div class="row row-cols-1 row-cols-md-2 g-3 mt-1">
             {% for project in projects %}
