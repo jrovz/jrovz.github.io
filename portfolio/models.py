@@ -112,18 +112,13 @@ def get_sample_projects() -> list[Project]:
             image="images/image.png",
         ),
         Project(
-            title="Portfolio Personal",
-            description="Sitio personal para mostrar perfil, stack y proyectos.",
-            tags=["Flask", "Jinja2", "Bootstrap"],
-            repo_url="https://github.com/tuusuario/portfolio",
-            live_url=None,
-            image=None,
-        ),
-        Project(
-            title="API de Ejemplo",
-            description="API REST simple con Flask para demostrar buenas prácticas.",
-            tags=["Flask", "REST", "Testing"],
-            repo_url="https://github.com/tuusuario/api-ejemplo",
+            title="CryptoBot (Telegram)",
+            description=(
+                "Chatbot para Telegram que consume la API de CoinMarketCap, almacena datos en SQLite, "
+                "analiza mercado (tendencias, liquidez, volatilidad, dominancia) y envía reportes estructurados."
+            ),
+            tags=["Python", "Telegram", "CoinMarketCap", "SQLite", "Pandas"],
+            repo_url="https://github.com/jrovz/Chatbot",
             live_url=None,
             image=None,
         ),

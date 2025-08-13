@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Dependencias/Build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Cachés de herramientas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+coverage/
+
+# Registros
+*.log
+logs/
+
+# Archivos de entorno
+.env
+.env.*
+*.env
+
+# Flask / bases de datos locales
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Node (por si se usa en el futuro)
+node_modules/
