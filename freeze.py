@@ -17,10 +17,10 @@ def main() -> None:
     app = create_app()
     freezer = Freezer(app)
 
-    # Rutas a congelar de forma explícita (con barra final para generar index.html)
+    # Rutas a congelar de forma explícita
     @freezer.register_generator
     def static_pages():
-        for path in ["/", "/proyectos/", "/diplomas/", "/sobre-mi/"]:
+        for path in ["/", "/proyectos", "/diplomas", "/sobre-mi"]:
             yield path
 
     # Genera HTMLs
