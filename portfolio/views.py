@@ -39,7 +39,7 @@ def index():
     )
 
 
-@bp.get("/diplomas")
+@bp.get("/diplomas/")
 def diplomas():
     """Página que muestra diplomas y certificaciones.
 
@@ -110,13 +110,13 @@ def diplomas():
     )
 
 
-@bp.get("/proyectos")
+@bp.get("/proyectos/")
 def projects():
     projects = get_sample_projects()
     return render_template("projects.html", projects=projects)
 
 
-@bp.get("/sobre-mi")
+@bp.get("/sobre-mi/")
 def about():
     profile = get_sample_profile()
     return render_template("about.html", profile=profile)

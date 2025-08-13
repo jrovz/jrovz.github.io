@@ -20,10 +20,13 @@ def main() -> None:
     # Rutas a congelar de forma explícita
     @freezer.register_generator
     def static_pages():
-        for path in ["/", "/proyectos", "/diplomas", "/sobre-mi"]:
+        # Usar barras finales para que genere .../index.html y Netlify sirva como text/html
+        for path in ["/", "/proyectos/", "/diplomas/", "/sobre-mi/"]:
             yield path
 
     # Genera HTMLs
+    # Limpia el directorio de salida para evitar archivos obsoletos
+    shutil.rmtree(BUILD_DIR, ignore_errors=True)
     freezer.freeze()
 
     # Copia estáticos a la carpeta de publicación con el mismo static_url_path
