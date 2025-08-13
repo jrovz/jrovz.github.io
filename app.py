@@ -9,6 +9,8 @@ def create_app() -> Flask:
     app.config["SECRET_KEY"] = "dev"
     app.config["BABEL_DEFAULT_LOCALE"] = "es"
     app.config["BABEL_DEFAULT_TIMEZONE"] = "UTC"
+    app.config["BABEL_TRANSLATION_DIRECTORIES"] = "translations"
+    app.config["BABEL_SUPPORTED_LOCALES"] = ["es", "en"]
 
     # Registro del blueprint principal del portafolio
     from portfolio import bp as portfolio_bp
